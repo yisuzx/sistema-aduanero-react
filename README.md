@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-# React + Vite
+El frontend del Sistema Aduanero Integrado está hecho con React 19 y Vite, y sirve como la interfaz principal para que los distintos usuarios interactúen con el sistema: Aduana, PDI y SAG. Para iniciarlo, necesitas tener instalado Node.js 18 o superior. La primera vez que abras el proyecto, ejecuta npm install para descargar las dependencias necesarias. Luego de eso, puedes iniciar el servidor de desarrollo con npm run dev, lo que normalmente abrirá la aplicación en http://localhost:5173. Es importante que el frontend se ejecute justamente en ese puerto, ya que el backend solo permite ese origen por configuración CORS.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+El sistema no trae usuarios creados, por lo que debes registrarte directamente desde la aplicación. El tipo de usuario que elijas en el formulario definirá el rol y el dashboard que verás al ingresar. El perfil Aduana (Usuario General) permite gestionar trámites y documentos. El perfil PDI permite registrar ingresos fronterizos y ver estadísticas migratorias. El perfil SAG permite registrar inspecciones, emitir certificados y gestionar cuarentenas.
 
-Currently, two official plugins are available:
+El módulo de reportes funciona bajo demanda: puedes ver el historial de reportes guardados y, si necesitas uno actualizado, solo debes presionar el botón para generar un nuevo snapshot. El sistema creará un registro con los datos actuales del backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# sistema-aduanero-react
-FRONTEND SISTEMA ADUANERO DESARROLLO FULLSTACK
->>>>>>> b0eb38a3f20fa26d48aae6053f71df90f1bf7d83
+Finalmente, la conexión hacia el backend está configurada en src/services/api.js, donde la URL base está definida como http://localhost:8080/api. Es importante que el backend esté corriendo antes de intentar iniciar sesión, registrarte o cargar información.
