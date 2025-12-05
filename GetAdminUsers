@@ -1,0 +1,1 @@
+[{"id":1,"nombre":"Juan","apellido":"Perez","email":"juan.perez@example.com","username":"jperez","role":"ROLE_ADUANA","enabled":true},{"id":2,"nombre":"Jesus Antonio","apellido":"Moran Toro","email":"jes.moran@pdi.cl","username":"jesmoran","role":"ROLE_PDI","enabled":true}]
